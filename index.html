@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -389,15 +390,36 @@
             line-height: 1.6;
         }
 
-        /* 第4区块：开户指南（Guía de Apertura de Cuenta）- 新增WhatsApp按钮 */
-        .account-steps {
+        /* 第4区块：股票投资科普（替换原开户指南，保持排版一致） */
+        .investment-science {
+            margin: 4rem 0;
+        }
+
+        .investment-science h2 {
+            color: #0f172a;
+            font-size: 2.2rem;
+            margin-bottom: 2rem;
+            padding-bottom: 0.8rem;
+            border-bottom: 4px solid #fbbf24;
+            display: inline-block;
+            font-weight: 700;
+            text-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+
+        .investment-intro {
+            font-size: 1.15rem;
+            margin-bottom: 3rem;
+            color: #4b5563;
+        }
+
+        .science-steps {
             display: flex;
             flex-direction: column;
             gap: 2.5rem;
             margin: 4rem 0;
         }
 
-        .step-card {
+        .science-card {
             display: flex;
             flex-wrap: wrap;
             align-items: center;
@@ -410,12 +432,12 @@
             backdrop-filter: blur(4px);
         }
 
-        .step-card:hover {
+        .science-card:hover {
             box-shadow: 0 8px 24px rgba(0,0,0,0.12);
             background-color: rgba(255, 255, 255, 0.98);
         }
 
-        .step-number {
+        .science-number {
             flex: 0 0 70px;
             height: 70px;
             background-color: #0f172a;
@@ -429,26 +451,26 @@
             transition: all 0.3s ease;
         }
 
-        .step-card:hover .step-number {
+        .science-card:hover .science-number {
             background-color: #fbbf24;
             color: #0f172a;
         }
 
-        .step-content {
+        .science-content {
             flex: 1 1 650px;
         }
 
-        .step-content h3 {
+        .science-content h3 {
             color: #0f172a;
             font-size: 1.4rem;
             margin-bottom: 1.2rem;
             font-weight: 600;
         }
 
-        .step-content p {
+        .science-content p {
             color: #4b5563;
-            margin-bottom: 1.2rem;
             line-height: 1.7;
+            margin-bottom: 0.8rem;
         }
 
         /* 页脚样式 */
@@ -498,7 +520,7 @@
             color: #94a3b8;
         }
 
-        /* 移动端适配（已移除图片相关的适配样式） */
+        /* 移动端适配 */
         @media (max-width: 768px) {
             .nav-links {
                 gap: 1.5rem;
@@ -517,7 +539,7 @@
                 font-size: 1rem;
             }
 
-            .step-number {
+            .science-number {
                 flex: 0 0 60px;
                 height: 60px;
                 font-size: 1.4rem;
@@ -551,10 +573,14 @@
             body {
                 background-size: cover, cover, 100px 100px, 100px 100px;
             }
+
+            .science-content {
+                flex: 1 1 100%;
+            }
         }
-    </style>
-</head>
-<body>
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
     <!-- 导航栏（锚点链接，实现平滑滚动到对应区块） -->
     <nav>
         <div class="nav-container">
@@ -563,12 +589,12 @@
                 <a href="#inicio" class="nav-link">Inicio</a>
                 <a href="#analisis" class="nav-link">Análisis del Mercado</a>
                 <a href="#acciones" class="nav-link">Acciones Populares</a>
-                <a href="#cuenta" class="nav-link">Abrir Cuenta</a>
+                <a href="#ciencia" class="nav-link">Consejos de Inversión</a>
             </div>
         </div>
-    </nav>
+    &lt;/nav&gt;
 
-    <!-- 第1区块：首页介绍（Inicio）- 已移除hero-image图片容器及内容 -->
+    <!-- 第1区块：首页介绍（Inicio） -->
     <section id="inicio" class="section">
         <h2 class="section-title">Bienvenido al Mercado Bursátil Español</h2>
         <div class="inicio-hero">
@@ -591,11 +617,11 @@
             <div class="feature-card">
                 <h3>Herramientas de Análisis Profesional</h3>
                 <p>Accede a gráficos en tiempo real, informes de mercado actualizados, análisis técnico y fundamental, y seguimiento de portafolios para tomar decisiones de inversión informadas y estratégicas.</p>
-            </div>
-        </div>
-    </section>
+            </div&gt;
+        &lt;/div&gt;
+    &lt;/section&gt;
 
-    <!-- 第2区块：市场分析（Análisis del Mercado）- 已移除chart-container中的图片 -->
+    <!-- 第2区块：市场分析（Análisis del Mercado） -->
     <section id="analisis" class="section">
         <h2 class="section-title">Análisis del Mercado Bursátil Español</h2>
         <div class="market-overview">
@@ -633,11 +659,10 @@
         <div class="market-chart">
             <h3>Evolución del IBEX 35 en los Últimos 6 Meses</h3>
             <div class="chart-container">
-                <!-- 图片已移除，保留容器用于展示文本说明（无冗余空白） -->
-                <p>El IBEX 35 mantiene una tendencia alcista consistente, impulsado por sectores energético, financiero y turístico, con un crecimiento del 5.89% en los últimos 30 días.</p>
+                <p>El IBEX 35 mantiene una tendencia alcista consistente, impulsado por el buen rendimiento de los sectores energético, financiero y turístico, con un crecimiento del 5.89% en los últimos 30 días. La recuperación económica europea, la estabilidad monetaria y la demanda internacional de productos españoles han sido los motores principales de este crecimiento.</p>
+                <p>Los analistas esperan que esta tendencia se mantenga en los próximos meses, respaldada por la mejora de las cifras de empleo y la inversión privada en sectores estratégicos.</p>
             </div>
-            <p class="content">El IBEX 35 ha mostrado una tendencia alcista consistente en los últimos meses, impulsado por el buen rendimiento de los sectores energético, financiero y turístico. La recuperación económica europea, la estabilidad monetaria y la demanda internacional de productos españoles han sido los motores principales de este crecimiento.</p>
-            <a href="https://wa.me/85295611357" class="btn" target="_blank">Contáctanos vía WhatsApp</a>
+            <a href="https://wa.me/34600000000" class="btn" target="_blank">Obtener Análisis Detallado</a>
         </div>
     </section>
 
@@ -691,66 +716,69 @@
             </div>
         </div>
 
-        <a href="https://wa.me/85295611357" class="btn" target="_blank">Contáctanos vía WhatsApp</a>
+        <a href="https://wa.me/34600000000" class="btn" target="_blank">Ver Todas las Acciones</a>
     </section>
 
-    <!-- 第4区块：开户指南（Guía de Apertura de Cuenta）- 新增WhatsApp按钮 -->
-    <section id="cuenta" class="section">
-        <h2 class="section-title">Guía de Apertura de Cuenta Bursátil</h2>
-        <p class="content">Abrir una cuenta bursátil en España es un proceso sencillo, rápido y 100% online. Sigue estos 4 pasos claros para empezar a invertir en el mercado español y europeo en pocos días.</p>
+    <!-- 第4区块：股票投资科普（Consejos de Inversión） -->
+    <section id="ciencia" class="section">
+        <div class="investment-science">
+            <h2>Consejos y Ciencias de Inversión Bursátil</h2>
+            <p class="investment-intro">La inversión en bolsa no es un juego de suerte: requiere conocimientos básicos, disciplina y una estrategia adaptada a tus objetivos. Aquí te compartimos conceptos clave y recomendaciones para invertir de forma inteligente.</p>
 
-        <div class="account-steps">
-            <div class="step-card">
-                <div class="step-number">1</div>
-                <div class="step-content">
-                    <h3>Selecciona un Broker o Entidad Financiera Regulada</h3>
-                    <p>Elige un broker autorizado por la CNMV (Comisión Nacional del Mercado de Valores) para garantizar la seguridad de tu capital. Puedes optar por bancos tradicionales con servicio de banca bursátil o brokers online con comisiones más competitivas.</p>
-                    <p>Recomendaciones destacadas: Interactive Brokers, eToro, BBVA Bursátil, Santander Investment, Trade Republic.</p>
+            <div class="science-steps">
+                <div class="science-card">
+                    <div class="science-number">1</div>
+                    <div class="science-content">
+                        <h3>Define tus Objetivos y Perfil de Riesgo</h3>
+                        <p>Antes de invertir, clarifica cuál es tu plazo (corto, medio o largo) y cuánto riesgo estás dispuesto a asumir. Los inversores conservadores prefieren bonos o fondos de bajo riesgo, mientras que los agresivos optan por acciones o productos derivados.</p>
+                        <p>Recuerda: mayor riesgo puede generar mayores rendimientos, pero también mayores pérdidas potenciales. Adápta tu portafolio a tu situación financiera personal.</p>
+                    </div>
                 </div>
-            </div>
-            <div class="step-card">
-                <div class="step-number">2</div>
-                <div class="step-content">
-                    <h3>Completa el Formulario de Apertura de Cuenta</h3>
-                    <p>Rellena el formulario de solicitud online con tus datos personales (nombre, dirección, DNI/NIE), datos bancarios de tu cuenta corriente y la información requerida sobre tu perfil de inversor (experiencia previa, objetivos de inversión, tolerancia al riesgo).</p>
+                <div class="science-card">
+                    <div class="science-number">2</div>
+                    <div class="science-content">
+                        <h3>Diversifica tu Portafolio de Inversiones</h3>
+                        <p>La diversificación es la clave para reducir el riesgo: no inviertas todo tu capital en un solo activo o sector. Distribuye tus inversiones entre acciones, bonos, ETFs y diferentes sectores (energía, finanzas, tecnología, etc.).</p>
+                        <p>De esta manera, si un activo o sector se desenvuelve mal, los demás pueden compensar las pérdidas, manteniendo la estabilidad de tu portafolio.</p>
+                    </div>
                 </div>
-            </div>
-            <div class="step-card">
-                <div class="step-number">3</div>
-                <div class="step-content">
-                    <h3>Verifica tu Identidad (KYC)</h3>
-                    <p>Para cumplir con las normativas anti-blanqueo de capital (KYC), deberás enviar documentos de identidad válidos (DNI, pasaporte o NIE) y un justificante de domicilio no mayor a 3 meses (factura de luz, agua, teléfono o extracto bancario).</p>
-                    <p>La verificación suele realizarse en minutos de forma online (por videollamada o carga de documentos) y es 100% segura.</p>
+                <div class="science-card">
+                    <div class="science-number">3</div>
+                    <div class="science-content">
+                        <h3>Aprende a Analizar los Activos Bursátiles</h3>
+                        <p>Existen dos métodos principales de análisis: el técnico (estudia gráficos y tendencias históricas) y el fundamental (evalúa la salud financiera de la empresa, sus ingresos, beneficios y perspectivas futuras).</p>
+                        <p>Para inversionistas principiantes, es recomendable empezar con el análisis fundamental, ya que ayuda a entender el valor real de una empresa y tomar decisiones más sólidas.</p>
+                    </div>
                 </div>
-            </div>
-            <div class="step-card">
-                <div class="step-number">4</div>
-                <div class="step-content">
-                    <h3>Realiza tu Primer Depósito y Empieza a Invertir</h3>
-                    <p>Una vez aprobada tu cuenta, realiza un depósito bancario (transferencia SEPA) para financiar tu cuenta bursátil. Los depósitos suelen reflejarse en 1 a 2 días hábiles (inmediatos en algunos brokers).</p>
-                    <p>Después de que el dinero esté disponible, podrás comprar y vender acciones, ETFs y otros activos en la Bolsa de Madrid en tiempo real.</p>
+                <div class="science-card">
+                    <div class="science-number">4</div>
+                    <div class="science-content">
+                        <h3>Mantén la Disciplina y Evita las Emociones</h3>
+                        <p>El mercado bursátil es volátil y sufre fluctuaciones diarias. No te dejes guiar por el pánico (cuando los precios caen) ni la codicia (cuando los precios suben). Sigue tu estrategia y evita operaciones impulsivas.</p>
+                        <p>La inversión a largo plazo suele ser más rentable que el trading de corto plazo, ya que permite superar las fluctuaciones temporales y beneficiarse del crecimiento sostenible de los activos.</p>
+                    </div>
                 </div>
             </div>
         </div>
-
-        <a href="https://wa.me/85295611357" class="btn" target="_blank">Contáctanos vía WhatsApp</a>
-    </section>
+        <a href="https://wa.me/34600000000" class="btn" target="_blank">Consultar Asesor Financiero&lt;/a&gt;
+    &lt;/section&gt;
 
     <!-- 页脚 -->
     <footer>
         <div class="footer-content">
             <div class="footer-links">
+                <a href="#inicio">Inicio</a>
+                <a href="#analisis">Análisis del Mercado</a>
+                <a href="#acciones">Acciones Populares</a>
+                <a href="#ciencia">Consejos de Inversión</a>
                 <a href="#">Términos y Condiciones</a>
                 <a href="#">Política de Privacidad</a>
-                <a href="#">Contacto Corporativo</a>
-                <a href="#">Preguntas Frecuentes (FAQ)</a>
-                <a href="#">Regulación CNMV</a>
             </div>
             <p>Bolsa España Pro © 2026 - Todos los derechos reservados. Autorizado por la CNMV (Nº de Registro: XXXXX).</p>
             <p>Plataforma de información bursátil y orientación inversora. No constituye asesoramiento financiero.</p>
-            <p class="footer-disclaimer">ADVERTENCIA: Las inversiones en el mercado bursátil conllevan riesgos inherentes, tu capital puede aumentar o disminuir de valor y no hay garantía de rendimiento. Investigue antes de tomar cualquier decisión de inversión.</p>
+            <p class="footer-disclaimer">ADVERTENCIA: Las inversiones en el mercado bursátil conllevan riesgos inherentes, tu capital puede aumentar o disminuir de valor y no hay garantía de rendimiento. Investiga antes de tomar cualquier decisión de inversión.</p>
         </div>
-    </footer>
+    </footer&gt;
 
     <!-- JavaScript：轻量化，无冗余代码 -->
     <script>
