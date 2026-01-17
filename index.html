@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -390,36 +389,15 @@
             line-height: 1.6;
         }
 
-        /* 第4区块：股票投资科普（替换原开户指南，保持排版一致） */
-        .investment-science {
-            margin: 4rem 0;
-        }
-
-        .investment-science h2 {
-            color: #0f172a;
-            font-size: 2.2rem;
-            margin-bottom: 2rem;
-            padding-bottom: 0.8rem;
-            border-bottom: 4px solid #fbbf24;
-            display: inline-block;
-            font-weight: 700;
-            text-shadow: 0 1px 3px rgba(0,0,0,0.05);
-        }
-
-        .investment-intro {
-            font-size: 1.15rem;
-            margin-bottom: 3rem;
-            color: #4b5563;
-        }
-
-        .science-steps {
+        /* 第4区块：平台核心优势（Ventajas de Nuestra Plataforma）- 替换原开户指南，突出平台亮点 */
+        .platform-advantages {
             display: flex;
             flex-direction: column;
             gap: 2.5rem;
             margin: 4rem 0;
         }
 
-        .science-card {
+        .advantage-card {
             display: flex;
             flex-wrap: wrap;
             align-items: center;
@@ -432,12 +410,12 @@
             backdrop-filter: blur(4px);
         }
 
-        .science-card:hover {
+        .advantage-card:hover {
             box-shadow: 0 8px 24px rgba(0,0,0,0.12);
             background-color: rgba(255, 255, 255, 0.98);
         }
 
-        .science-number {
+        .advantage-number {
             flex: 0 0 70px;
             height: 70px;
             background-color: #0f172a;
@@ -451,26 +429,26 @@
             transition: all 0.3s ease;
         }
 
-        .science-card:hover .science-number {
+        .advantage-card:hover .advantage-number {
             background-color: #fbbf24;
             color: #0f172a;
         }
 
-        .science-content {
+        .advantage-content {
             flex: 1 1 650px;
         }
 
-        .science-content h3 {
+        .advantage-content h3 {
             color: #0f172a;
             font-size: 1.4rem;
             margin-bottom: 1.2rem;
             font-weight: 600;
         }
 
-        .science-content p {
+        .advantage-content p {
             color: #4b5563;
+            margin-bottom: 1.2rem;
             line-height: 1.7;
-            margin-bottom: 0.8rem;
         }
 
         /* 页脚样式 */
@@ -520,7 +498,7 @@
             color: #94a3b8;
         }
 
-        /* 移动端适配 */
+        /* 移动端适配（已移除图片相关的适配样式） */
         @media (max-width: 768px) {
             .nav-links {
                 gap: 1.5rem;
@@ -539,7 +517,7 @@
                 font-size: 1rem;
             }
 
-            .science-number {
+            .advantage-number {
                 flex: 0 0 60px;
                 height: 60px;
                 font-size: 1.4rem;
@@ -573,14 +551,10 @@
             body {
                 background-size: cover, cover, 100px 100px, 100px 100px;
             }
-
-            .science-content {
-                flex: 1 1 100%;
-            }
         }
-    &lt;/style&gt;
-&lt;/head&gt;
-&lt;body&gt;
+    </style>
+</head>
+<body>
     <!-- 导航栏（锚点链接，实现平滑滚动到对应区块） -->
     <nav>
         <div class="nav-container">
@@ -589,12 +563,12 @@
                 <a href="#inicio" class="nav-link">Inicio</a>
                 <a href="#analisis" class="nav-link">Análisis del Mercado</a>
                 <a href="#acciones" class="nav-link">Acciones Populares</a>
-                <a href="#ciencia" class="nav-link">Consejos de Inversión</a>
+                <a href="#ventajas" class="nav-link">Nuestras Ventajas</a>
             </div>
         </div>
-    &lt;/nav&gt;
+    </nav>
 
-    <!-- 第1区块：首页介绍（Inicio） -->
+    <!-- 第1区块：首页介绍（Inicio）- 已移除hero-image图片容器及内容 -->
     <section id="inicio" class="section">
         <h2 class="section-title">Bienvenido al Mercado Bursátil Español</h2>
         <div class="inicio-hero">
@@ -617,11 +591,11 @@
             <div class="feature-card">
                 <h3>Herramientas de Análisis Profesional</h3>
                 <p>Accede a gráficos en tiempo real, informes de mercado actualizados, análisis técnico y fundamental, y seguimiento de portafolios para tomar decisiones de inversión informadas y estratégicas.</p>
-            </div&gt;
-        &lt;/div&gt;
-    &lt;/section&gt;
+            </div>
+        </div>
+    </section>
 
-    <!-- 第2区块：市场分析（Análisis del Mercado） -->
+    <!-- 第2区块：市场分析（Análisis del Mercado）- 已移除chart-container中的图片 -->
     <section id="analisis" class="section">
         <h2 class="section-title">Análisis del Mercado Bursátil Español</h2>
         <div class="market-overview">
@@ -659,10 +633,11 @@
         <div class="market-chart">
             <h3>Evolución del IBEX 35 en los Últimos 6 Meses</h3>
             <div class="chart-container">
-                <p>El IBEX 35 mantiene una tendencia alcista consistente, impulsado por el buen rendimiento de los sectores energético, financiero y turístico, con un crecimiento del 5.89% en los últimos 30 días. La recuperación económica europea, la estabilidad monetaria y la demanda internacional de productos españoles han sido los motores principales de este crecimiento.</p>
-                <p>Los analistas esperan que esta tendencia se mantenga en los próximos meses, respaldada por la mejora de las cifras de empleo y la inversión privada en sectores estratégicos.</p>
+                <!-- 图片已移除，保留容器用于展示文本说明（无冗余空白） -->
+                <p>El IBEX 35 mantiene una tendencia alcista consistente, impulsado por sectores energético, financiero y turístico, con un crecimiento del 5.89% en los últimos 30 días.</p>
             </div>
-            <a href="https://wa.me/34600000000" class="btn" target="_blank">Obtener Análisis Detallado</a>
+            <p class="content">El IBEX 35 ha mostrado una tendencia alcista consistente en los últimos meses, impulsado por el buen rendimiento de los sectores energético, financiero y turístico. La recuperación económica europea, la estabilidad monetaria y la demanda internacional de productos españoles han sido los motores principales de este crecimiento.</p>
+            <a href="https://wa.me/34600000000" class="btn" target="_blank">Contáctanos vía WhatsApp</a>
         </div>
     </section>
 
@@ -716,69 +691,67 @@
             </div>
         </div>
 
-        <a href="https://wa.me/34600000000" class="btn" target="_blank">Ver Todas las Acciones</a>
+        <a href="https://wa.me/34600000000" class="btn" target="_blank">Contáctanos vía WhatsApp</a>
     </section>
 
-    <!-- 第4区块：股票投资科普（Consejos de Inversión） -->
-    <section id="ciencia" class="section">
-        <div class="investment-science">
-            <h2>Consejos y Ciencias de Inversión Bursátil</h2>
-            <p class="investment-intro">La inversión en bolsa no es un juego de suerte: requiere conocimientos básicos, disciplina y una estrategia adaptada a tus objetivos. Aquí te compartimos conceptos clave y recomendaciones para invertir de forma inteligente.</p>
+    <!-- 第4区块：平台核心优势（Ventajas de Nuestra Plataforma）- 替换原开户指南，突出选择我们的理由 -->
+    <section id="ventajas" class="section">
+        <h2 class="section-title">Por Qué Elegir Nuestra Plataforma Bolsa España Pro</h2>
+        <p class="content">En un mercado bursátil competitivo, la elección de la plataforma adecuada marca la diferencia entre el éxito y el estancamiento. Nuestra plataforma combina tecnología de vanguardia, servicio personalizado y condiciones competitivas para ofrecerte una experiencia de inversión sin igual.</p>
 
-            <div class="science-steps">
-                <div class="science-card">
-                    <div class="science-number">1</div>
-                    <div class="science-content">
-                        <h3>Define tus Objetivos y Perfil de Riesgo</h3>
-                        <p>Antes de invertir, clarifica cuál es tu plazo (corto, medio o largo) y cuánto riesgo estás dispuesto a asumir. Los inversores conservadores prefieren bonos o fondos de bajo riesgo, mientras que los agresivos optan por acciones o productos derivados.</p>
-                        <p>Recuerda: mayor riesgo puede generar mayores rendimientos, pero también mayores pérdidas potenciales. Adápta tu portafolio a tu situación financiera personal.</p>
-                    </div>
+        <div class="platform-advantages">
+            <div class="advantage-card">
+                <div class="advantage-number">1</div>
+                <div class="advantage-content">
+                    <h3>Comisiones Mínimas y Transparentes, Sin Costos Ocultos</h3>
+                    <p>Distinguimosnos por nuestras comisiones de operación entre las más bajas del mercado español (solo 0,15% por operación, sin límite mínimo) y la total transparencia en todos los gastos. No cobramos tarifas de mantenimiento de cuenta, tarifas de depósito SEPA ni tarifas de cierre de cuenta, permitiéndote maximizar el rendimiento de tus inversiones.</p>
+                    <p>Además, ofrecimos comisiones cero para operaciones en ETFs sostenibles, fomentando inversiones con impacto positivo sin afectar tu patrimonio.</p>
                 </div>
-                <div class="science-card">
-                    <div class="science-number">2</div>
-                    <div class="science-content">
-                        <h3>Diversifica tu Portafolio de Inversiones</h3>
-                        <p>La diversificación es la clave para reducir el riesgo: no inviertas todo tu capital en un solo activo o sector. Distribuye tus inversiones entre acciones, bonos, ETFs y diferentes sectores (energía, finanzas, tecnología, etc.).</p>
-                        <p>De esta manera, si un activo o sector se desenvuelve mal, los demás pueden compensar las pérdidas, manteniendo la estabilidad de tu portafolio.</p>
-                    </div>
+            </div>
+            <div class="advantage-card">
+                <div class="advantage-number">2</div>
+                <div class="advantage-content">
+                    <h3>Herramientas de Análisis en Tiempo Real, Exclusivas para Nuestros Usuarios</h3>
+                    <p>Accede a nuestro panel de análisis profesional con gráficos de K线 avanzados (con indicadores técnicos como RSI, MACD y Bollinger Bands), informes de investigación fundamental elaborados por nuestro equipo de analistas financieros (actualizados diariamente) y seguimiento de portafolios con alertas personalizadas.</p>
+                    <p>Nuestra tecnología permite visualizar la evolución de tus inversiones en comparación con el IBEX 35 y otros índices de referencia, con informes mensuales automatizados para que tengas todo el control en un solo clic.</p>
                 </div>
-                <div class="science-card">
-                    <div class="science-number">3</div>
-                    <div class="science-content">
-                        <h3>Aprende a Analizar los Activos Bursátiles</h3>
-                        <p>Existen dos métodos principales de análisis: el técnico (estudia gráficos y tendencias históricas) y el fundamental (evalúa la salud financiera de la empresa, sus ingresos, beneficios y perspectivas futuras).</p>
-                        <p>Para inversionistas principiantes, es recomendable empezar con el análisis fundamental, ya que ayuda a entender el valor real de una empresa y tomar decisiones más sólidas.</p>
-                    </div>
+            </div>
+            <div class="advantage-card">
+                <div class="advantage-number">3</div>
+                <div class="advantage-content">
+                    <h3>Soporte Personalizado 24/7, Con Expertos en Mercado Español</h3>
+                    <p>A diferencia de otras plataformas, contamos con un equipo de asesores financieros especializados en el mercado español, disponibles 24 horas al día, 7 días a la semana (por chat, correo electrónico y WhatsApp) para resolver tus dudas, orientarte en la elección de activos y ayudarte a ajustar tu estrategia de inversión.</p>
+                    <p>Además, ofrecimos webinars gratuitos mensuales para principiantes y profesionales, con temas como "Cómo invertir en el IBEX 35" y "Estrategias de dividendos en España".</p>
                 </div>
-                <div class="science-card">
-                    <div class="science-number">4</div>
-                    <div class="science-content">
-                        <h3>Mantén la Disciplina y Evita las Emociones</h3>
-                        <p>El mercado bursátil es volátil y sufre fluctuaciones diarias. No te dejes guiar por el pánico (cuando los precios caen) ni la codicia (cuando los precios suben). Sigue tu estrategia y evita operaciones impulsivas.</p>
-                        <p>La inversión a largo plazo suele ser más rentable que el trading de corto plazo, ya que permite superar las fluctuaciones temporales y beneficiarse del crecimiento sostenible de los activos.</p>
-                    </div>
+            </div>
+            <div class="advantage-card">
+                <div class="advantage-number">4</div>
+                <div class="advantage-content">
+                    <h3>Seguridad Máxima y Flexibilidad, Con Tecnología de Vanguardia</h3>
+                    <p>Nuestra plataforma está regulada por la CNMV y cuenta con la protección del Fondo de Garantía de Inversores (FGI) hasta 100.000 € por usuario, garantizando la seguridad de tu capital en todo momento. Además, implementamos autenticación de dos factores (2FA) y cifrado end-to-end para proteger tus operaciones y datos personales.</p>
+                    <p>Ofrecemos flexibilidad total: opera desde nuestra plataforma web, nuestra aplicación móvil (disponible para iOS y Android) o mediante API para inversores profesionales, con sincronización en tiempo real entre todos los dispositivos.</p>
                 </div>
             </div>
         </div>
-        <a href="https://wa.me/34600000000" class="btn" target="_blank">Consultar Asesor Financiero&lt;/a&gt;
-    &lt;/section&gt;
+
+        <a href="https://wa.me/34600000000" class="btn" target="_blank">Empieza con Nosotros Hoy</a>
+    </section>
 
     <!-- 页脚 -->
     <footer>
         <div class="footer-content">
             <div class="footer-links">
-                <a href="#inicio">Inicio</a>
-                <a href="#analisis">Análisis del Mercado</a>
-                <a href="#acciones">Acciones Populares</a>
-                <a href="#ciencia">Consejos de Inversión</a>
                 <a href="#">Términos y Condiciones</a>
                 <a href="#">Política de Privacidad</a>
+                <a href="#">Contacto Corporativo</a>
+                <a href="#">Preguntas Frecuentes (FAQ)</a>
+                <a href="#">Regulación CNMV</a>
             </div>
             <p>Bolsa España Pro © 2026 - Todos los derechos reservados. Autorizado por la CNMV (Nº de Registro: XXXXX).</p>
             <p>Plataforma de información bursátil y orientación inversora. No constituye asesoramiento financiero.</p>
-            <p class="footer-disclaimer">ADVERTENCIA: Las inversiones en el mercado bursátil conllevan riesgos inherentes, tu capital puede aumentar o disminuir de valor y no hay garantía de rendimiento. Investiga antes de tomar cualquier decisión de inversión.</p>
+            <p class="footer-disclaimer">ADVERTENCIA: Las inversiones en el mercado bursátil conllevan riesgos inherentes, tu capital puede aumentar o disminuir de valor y no hay garantía de rendimiento. Investigue antes de tomar cualquier decisión de inversión.</p>
         </div>
-    </footer&gt;
+    </footer>
 
     <!-- JavaScript：轻量化，无冗余代码 -->
     <script>
